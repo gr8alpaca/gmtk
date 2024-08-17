@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bplmefsyb1bom"]
+
+[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_hvcej"]
+[ext_resource type="Texture2D" uid="uid://cy5rbe0riadm6" path="res://Art/Lava/Lava004.png" id="2_hosih"]
+[ext_resource type="PackedScene" uid="uid://dco6qux8l4e23" path="res://Scenes/Environment/Interactables/vortex.tscn" id="3_kh6ep"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2hjeg"]
+radius = 7.0
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("cam")]
+scale = Vector2(0.999994, 0.999994)
+motion_mode = 1
+script = ExtResource("1_hvcej")
+cam = NodePath("Camera2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2hjeg")
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(1.8771e-06, 0.648593, 0.298223, 1)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_hosih")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Vortex" parent="." instance=ExtResource("3_kh6ep")]
+position = Vector2(-128, 0)
+gravity_point = true

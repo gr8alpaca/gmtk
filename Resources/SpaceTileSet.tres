@@ -1,0 +1,20 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cn2tjgtaa0t51"]
+
+[ext_resource type="Texture2D" uid="uid://8jmfycfvv6vo" path="res://Resources/SpaceAtlas.png" id="1_nknd8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_imxfo"]
+texture = ExtResource("1_nknd8")
+texture_region_size = Vector2i(1024, 1024)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[resource]
+tile_size = Vector2i(1024, 1024)
+sources/8 = SubResource("TileSetAtlasSource_imxfo")
+tile_proxies/coords_level = [[0, Vector2i(0, 0)], [8, Vector2i(0, 0)], [1, Vector2i(0, 0)], [8, Vector2i(1, 0)], [2, Vector2i(0, 0)], [8, Vector2i(2, 0)], [3, Vector2i(0, 0)], [8, Vector2i(3, 0)], [4, Vector2i(0, 0)], [8, Vector2i(0, 1)], [5, Vector2i(0, 0)], [8, Vector2i(1, 1)], [6, Vector2i(0, 0)], [8, Vector2i(2, 1)], [7, Vector2i(0, 0)], [8, Vector2i(3, 1)]]

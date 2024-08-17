@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="GMTK"
-run/main_scene="res://Scenes/world.tscn"
+run/main_scene="res://Scenes/Environment/world.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [autoload]
@@ -27,7 +28,7 @@ gdscript/warnings/unused_private_class_variable=0
 gdscript/warnings/unused_parameter=0
 gdscript/warnings/unused_signal=0
 gdscript/warnings/unreachable_code=0
-gdscript/warnings/untyped_declaration=2
+gdscript/warnings/untyped_declaration=1
 gdscript/warnings/unsafe_void_return=0
 gdscript/warnings/static_called_on_instance=0
 gdscript/warnings/integer_division=0
@@ -35,9 +36,14 @@ gdscript/warnings/narrowing_conversion=0
 gdscript/warnings/int_as_enum_without_cast=0
 gdscript/warnings/int_as_enum_without_match=0
 
-[editor_plugins]
+[display]
 
-enabled=PackedStringArray("res://addons/third-person-camera/plugin.cfg")
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/always_on_top=true
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="viewport"
 
 [file_customization]
 
@@ -46,7 +52,7 @@ folder_colors={
 "res://Autoload/": "teal",
 "res://Resources/": "gray",
 "res://Scenes/": "blue",
-"res://addons/": "gray"
+"res://Scripts/": "yellow"
 }
 
 [input]
@@ -76,6 +82,11 @@ tp_camera_down={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_2="Vortex"
+
 [physics]
 
 3d/default_gravity=19.6
+2d/default_gravity=0.0

@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://dco6qux8l4e23"]
+
+[ext_resource type="Script" path="res://Scenes/Environment/Interactables/Vortex.gd" id="1_b5cii"]
+[ext_resource type="Texture2D" uid="uid://c1rjsnu35kk43" path="res://Art/Vortex.png" id="2_apgcp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gxrj6"]
+radius = 64.0
+
+[node name="Vortex" type="Area2D" node_paths=PackedStringArray("sprite")]
+disable_mode = 2
+collision_layer = 2
+collision_mask = 2
+input_pickable = false
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 38.4
+gravity = 100.0
+script = ExtResource("1_b5cii")
+sprite = NodePath("Vortex")
+rein_color = Color(0.277999, 0.365054, 0.629294, 0.517647)
+rein_width = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gxrj6")
+metadata/_edit_lock_ = true
+
+[node name="Vortex" type="Sprite2D" parent="."]
+rotation = 2419.73
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("2_apgcp")
+metadata/_edit_lock_ = true
